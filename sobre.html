@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Marketplace Virtual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            color: #61dafb;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative; /* Necessário para o posicionamento absoluto da imagem */
+        }
+        #titulo {
+            font-size: 4em;
+            margin-top: 50px;
+        }
+        #conteudo {
+            font-size: 1.5em;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: 80%;
+            margin: 20px auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        #voltar {
+            margin-top: 50px;
+            padding: 10px 20px;
+            background-color: #61dafb;
+            color: #282c34;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #voltar:hover {
+            background-color: #4fa3f7;
+        }
+
+        /* Estilo para o primeiro perfil no canto inferior esquerdo (yNotLiG) */
+        #imagem-desenvolvedor {
+            position: absolute;
+            bottom: 60px;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Texto de desenvolvedor abaixo da imagem */
+        #texto-desenvolvedor {
+            position: absolute;
+            bottom: 5px;
+            left: 140px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 200px;
+        }
+
+        /* Nome do desenvolvedor acima do texto */
+        #nome-desenvolvedor {
+            position: absolute;
+            bottom: 90px;
+            left: 140px;
+            font-size: 1.5em;
+            color: red; /* Nome em vermelho */
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 200px;
+        }
+
+        /* Novo estilo para o segundo perfil no canto inferior direito (Barbosa) */
+        #imagem-barbosa {
+            position: absolute;
+            bottom: 60px; /* Ajuste a posição da imagem de Barbosa */
+            right: 20px; /* Colocado no canto inferior direito */
+            width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: 100px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Nome de Barbosa */
+        #nome-barbosa {
+            position: absolute;
+            bottom: 90px; /* Ajustei para ficar abaixo da imagem */
+            right: 140px; /* Posicionamento à direita */
+            font-size: 1.5em;
+            color: #ff0000; /* Nome em vermelho */
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 200px;
+        }
+
+        /* Texto de Barbosa */
+        #texto-barbosa {
+            position: absolute;
+            bottom: 5px; /* Ajuste a posição do texto de Barbosa */
+            right: 140px; /* Posicionamento à direita */
+            font-size: 1.2em;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="titulo">Sobre o Nosso Marketplace Virtual</div>
+    <div id="conteudo">
+        <p>Bem-vindo ao nosso Marketplace Virtual! Somos uma plataforma inovadora que conecta **compradores** e **vendedores** de **produtos digitais** e **serviços digitais**.</p>
+        
+        <p><strong>O que oferecemos:</strong></p>
+        <ul style="text-align: left; margin: 0; padding-left: 40px;">
+            <li><strong>Produtos Digitais:</strong> E-books, cursos online, softwares, templates, e muito mais. Produtos que você pode baixar e utilizar imediatamente após a compra.</li>
+            <li><strong>Serviços Digitais:</strong> Consultorias online, design gráfico, desenvolvimento de sites, marketing digital, entre outros serviços prestados por profissionais especializados.</li>
+        </ul>
+
+        <p>Nosso objetivo é proporcionar uma experiência segura e intuitiva, oferecendo uma ampla variedade de produtos e serviços digitais para atender às suas necessidades, seja você um **empreendedor**, **profissional autônomo** ou **entusiasta da tecnologia**.</p>
+        
+        <p>Se você está procurando uma maneira fácil e rápida de adquirir ou oferecer produtos e serviços digitais, você está no lugar certo!</p>
+    </div>
+    <button id="voltar" onclick="window.location.href='index.html';">Voltar para a página inicial</button>
+    
+    <!-- Primeiro perfil do desenvolvedor (yNotLiG) -->
+    <a href="https://media.giphy.com/media/3o7btPCcdNcmkpmB2g/giphy.gif" id="imagem-desenvolvedor" target="_blank">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExemFldDYzemwxY2d3cG55M3h3d2l3eHpybWpkam9mdjlrcmRiaDBycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oC3VR4Mw1IWlwM6jfg/giphy.gif" alt="Desenvolvedor" style="width: 100%; height: 100%; border-radius: 5px;">
+    </a>
+    <div id="nome-desenvolvedor">yNotLiG</div>
+    <div id="texto-desenvolvedor">Desenvolvedor do site ADM Nível 5</div>
+    
+    <!-- Segundo perfil do sub desenvolvedor (Barbosa) -->
+    <a href="https://i.pinimg.com/736x/65/fa/cb/65facb72931f0bdf889039927ff4f570.jpg" id="imagem-barbosa" target="_blank">
+        <img src="https://i.pinimg.com/736x/65/fa/cb/65facb72931f0bdf889039927ff4f570.jpg" alt="Sub Desenvolvedor Barbosa" style="width: 100%; height: 100%; border-radius: 5px;">
+    </a>
+    <div id="nome-barbosa">Barbosa</div>
+    <div id="texto-barbosa">Sub desenvolvedor do site Aprendiz Nível 1</div>
+</body>
+</html>

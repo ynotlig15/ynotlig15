@@ -1,0 +1,204 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Regressivo</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            color: #61dafb;
+            text-align: center;
+            position: relative; /* Necessário para o posicionamento absoluto do botão */
+        }
+        #texto-acima {
+            font-size: 8em; /* Tamanho grande para o texto acima */
+            margin-bottom: 40px; /* Espaço aumentado entre o texto e o contador */
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #contador {
+            font-size: 10em; /* Tamanho do contador */
+            color: #ff4d4d; /* Cor vermelha para o contador */
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        #mensagem-abaixo {
+            font-size: 6em; /* Tamanho do texto abaixo do contador */
+            margin-top: 40px; /* Espaço acima do texto */
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        /* Estilo do botão "Sobre nós" */
+        #sobre-nos-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #61dafb;
+            color: #282c34;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s;
+        }
+        #sobre-nos-btn:hover {
+            background-color: #4fa3f7;
+        }
+
+        /* Estilo para o primeiro perfil no canto inferior esquerdo (yNotLiG) */
+        #imagem-desenvolvedor {
+            position: absolute;
+            bottom: 60px;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Texto de desenvolvedor abaixo da imagem */
+        #texto-desenvolvedor {
+            position: absolute;
+            bottom: 5px;
+            left: 140px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 200px;
+        }
+
+        /* Nome do desenvolvedor acima do texto */
+        #nome-desenvolvedor {
+            position: absolute;
+            bottom: 90px;
+            left: 140px;
+            font-size: 1.5em;
+            color: red; /* Nome em vermelho */
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 200px;
+        }
+
+        /* Novo estilo para o segundo perfil no canto inferior direito (Barbosa) */
+        #imagem-barbosa {
+            position: absolute;
+            bottom: 60px; /* Ajuste a posição da imagem de Barbosa */
+            right: 20px; /* Colocado no canto inferior direito */
+            width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: 100px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Nome de Barbosa */
+        #nome-barbosa {
+            position: absolute;
+            bottom: 90px; /* Ajustei para ficar abaixo da imagem */
+            right: 140px; /* Posicionamento à direita */
+            font-size: 1.5em;
+            color: #ff0000; /* Nome em vermelho */
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 200px;
+        }
+
+        /* Texto de Barbosa */
+        #texto-barbosa {
+            position: absolute;
+            bottom: 5px; /* Ajuste a posição do texto de Barbosa */
+            right: 140px; /* Posicionamento à direita */
+            font-size: 1.2em;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão redirecionando para outra página -->
+    <button id="sobre-nos-btn" onclick="window.location.href='sobre.html';">Sobre nós</button>
+
+    <div id="texto-acima">Faltam Apenas</div>
+    <div id="contador">99d 22h 56m 45s</div>
+    <div id="mensagem-abaixo">Para o site ggmv : Estar Disponivel no ar</div>
+
+    <!-- Primeiro perfil do desenvolvedor (yNotLiG) -->
+    <a href="https://media.giphy.com/media/3o7btPCcdNcmkpmB2g/giphy.gif" id="imagem-desenvolvedor" target="_blank">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExemFldDYzemwxY2d3cG55M3h3d2l3eHpybWpkam9mdjlrcmRiaDBycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oC3VR4Mw1IWlwM6jfg/giphy.gif" alt="Desenvolvedor" style="width: 100%; height: 100%; border-radius: 5px;">
+    </a>
+    <div id="nome-desenvolvedor">yNotLiG</div>
+    <div id="texto-desenvolvedor">Desenvolvedor do site ADM Nível 5</div>
+    
+    <!-- Segundo perfil do sub desenvolvedor (Barbosa) -->
+    <a href="https://i.pinimg.com/736x/65/fa/cb/65facb72931f0bdf889039927ff4f570.jpg" id="imagem-barbosa" target="_blank">
+        <img src="https://i.pinimg.com/736x/65/fa/cb/65facb72931f0bdf889039927ff4f570.jpg" alt="Sub Desenvolvedor Barbosa" style="width: 100%; height: 100%; border-radius: 5px;">
+    </a>
+    <div id="nome-barbosa">Barbosa</div>
+    <div id="texto-barbosa">Sub desenvolvedor do site Aprendiz Nível 1</div>
+
+    <script>
+        function atualizarContador() {
+            // Data de destino: 09 de julho de 2025, às 00:00:00
+            const destino = new Date(2025, 6, 9, 0, 0, 0);  // Mês é 0-indexed (0 é janeiro, 6 é julho)
+
+            // Função para atualizar o contador
+            function atualizar() {
+                const agora = new Date();
+                const restante = destino - agora;
+
+                if (restante <= 0) {
+                    document.getElementById('contador').innerHTML = 'O tempo acabou!';
+                    clearInterval(intervalo);
+                    return;
+                }
+
+                const dias = Math.floor(restante / (1000 * 60 * 60 * 24));
+                const horas = Math.floor((restante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutos = Math.floor((restante % (1000 * 60 * 60)) / (1000 * 60));
+                const segundos = Math.floor((restante % (1000 * 60)) / 1000);
+
+                document.getElementById('contador').innerHTML =
+                    `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+            }
+
+            // Atualiza o contador a cada segundo
+            const intervalo = setInterval(atualizar, 1000);
+
+            // Atualiza imediatamente para não esperar 1 segundo para mostrar o tempo inicial
+            atualizar();
+        }
+
+        // Inicia o contador assim que a página for carregada
+        window.onload = atualizarContador;
+    </script>
+</body>
+</html>
